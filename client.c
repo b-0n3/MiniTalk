@@ -20,7 +20,6 @@ void    convert_and_send(int pid, char *message)
         while (i  < 8)
         {
             result = message[index]  >> i & 1;
-            printf("%d", result);
             if (result == 0)
                  kill(pid, SIGUSR2);
             else

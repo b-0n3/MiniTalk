@@ -1,14 +1,13 @@
 #include  "utils.h"
 
-
-void    ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    if (str != NULL)
-    {
-       ft_putchar(*str);
-        while (*(str++) != '\0')
-            ft_putchar(*str);
-    }
+	if (str != NULL)
+	{
+		ft_putchar(*str);
+		while (*(str++) != '\0')
+			ft_putchar(*str);
+	}
 }
 
 void	ft_putchar(char c)
@@ -18,7 +17,7 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int n)
 {
-	unsigned int newvar;
+	unsigned int	newvar;
 
 	newvar = n;
 	if (n < 0)
@@ -36,8 +35,3 @@ void	ft_putnbr(int n)
 		ft_putchar(newvar % 10 + 48);
 	}
 }
-
-// void conver_and_print(char ch)
-// {
-
-// }
