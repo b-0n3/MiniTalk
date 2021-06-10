@@ -4,8 +4,11 @@
 void    ft_putstr(char *str)
 {
     if (str != NULL)
+    {
+       ft_putchar(*str);
         while (*(str++) != '\0')
             ft_putchar(*str);
+    }
 }
 
 void	ft_putchar(char c)
