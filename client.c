@@ -74,18 +74,13 @@ void send_terminator(int pid)
 int     main(int argc , char **argv)
 {
     int pid;
-    char *mypid;
 
     if (argc == 3)
     {
        pid =  validate_pid(argv[1]);
-       mypid = ft_itoa(getpid());
-       convert_and_send(pid, mypid);
-       free(mypid);
-       convert_and_send(pid, "\n");
        convert_and_send(pid , argv[2]);
        send_terminator(pid);
-       ft_putstr("message recieved 😃\n");
+       ft_putstr("message sent 😃\n");
     }
     else
     {
